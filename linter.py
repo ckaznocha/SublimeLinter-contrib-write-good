@@ -18,7 +18,7 @@ class WriteGood(Linter):
     """Provides an interface to write-good."""
 
     syntax = '*'
-    cmd = ('write-good', '@')
+    cmd = ('write-good')
     regex = r'''(?xi)
         ^(?P<message>(?P<near>"[^"]*").*)\son\sline\s(?P<line>\d+)\sat\scolumn\s\d+$
     '''
