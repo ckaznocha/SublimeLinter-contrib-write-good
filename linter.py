@@ -24,4 +24,7 @@ class WriteGood(Linter):
     '''
     multiline = True
     default_type = highlight.WARNING
+    selectors = {
+        '*': 'comment'
+    }
     tempfile_suffix = '.tmp'
