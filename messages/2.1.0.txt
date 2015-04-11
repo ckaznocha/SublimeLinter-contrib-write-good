@@ -1,0 +1,4 @@
+SublimeLinter-contrib-write-good
+-------------------------------
+
+- Now lints text scopes in addition to code comments

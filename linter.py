@@ -19,12 +19,17 @@ class WriteGood(Linter):
 
     syntax = '*'
     cmd = ('write-good')
+    version_args = '--version'
+    version_re = r'(?P<version>\d+\.\d+\.\d+)'
     regex = r'''(?xi)
         ^(?P<message>(?P<near>"[^"]*").*)\son\sline\s(?P<line>\d+)\sat\scolumn\s\d+$
     '''
     multiline = True
     default_type = highlight.WARNING
     selectors = {
-        '*': 'comment'
+        'source': 'comment',
+        'text.html.markdown': '*',
+        'text.plain': '*',
+        'text.tex.latex': '*'
     }
     tempfile_suffix = '.tmp'
