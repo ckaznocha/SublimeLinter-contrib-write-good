@@ -28,6 +28,8 @@ class WriteGood(Linter):
     default_type = highlight.WARNING
     selectors = {
         'source': 'comment',
-        'text': '*'
+        'text.html.markdown': '*',
+        'text.plain': '*',
+        'text.tex.latex': '*'
     }
     tempfile_suffix = '.tmp'
