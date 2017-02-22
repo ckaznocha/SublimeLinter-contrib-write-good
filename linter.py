@@ -10,14 +10,15 @@
 
 """This module exports the WriteGood plugin class."""
 
-from SublimeLinter.lint import Linter, highlight
+from SublimeLinter.lint import NodeLinter, highlight
 
 
-class WriteGood(Linter):
+class WriteGood(NodeLinter):
     """Provides an interface to write-good."""
 
     syntax = ('*')
     cmd = ('write-good')
+    npm_name = 'write-good'
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
     version_requirement = ">=0.9.0"

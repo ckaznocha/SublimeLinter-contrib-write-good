@@ -21,6 +21,8 @@ Before using this plugin, you must ensure that `write-good` is installed on your
 
 1. If you are using `nvm` and `zsh`, ensure that the line to load `nvm` is in `.zshenv` and not `.zshrc`.
 
+1. If a local version of write-good is available it will be used before trying to find the system version.
+
 ### Linter configuration
 In order for `write-good` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
 
