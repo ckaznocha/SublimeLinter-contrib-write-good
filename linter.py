@@ -17,7 +17,7 @@ class WriteGood(Linter):
 
     """Provides an interface to write-good."""
 
-    syntax = '*'
+    syntax = ('markdown', 'plain text')
     cmd = ('write-good')
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
