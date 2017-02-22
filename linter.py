@@ -14,13 +14,13 @@ from SublimeLinter.lint import Linter, highlight
 
 
 class WriteGood(Linter):
-
     """Provides an interface to write-good."""
 
     syntax = ('*')
     cmd = ('write-good')
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
+    version_requirement = ">=0.9.0"
     regex = r'''(?xi)
         ^(?P<message>(?P<near>"[^"]*").*)\son\sline\s(?P<line>\d+)\sat\scolumn\s\d+$
     '''
