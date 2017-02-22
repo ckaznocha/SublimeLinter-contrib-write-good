@@ -17,7 +17,7 @@ class WriteGood(Linter):
 
     """Provides an interface to write-good."""
 
-    syntax = ('markdown', 'plain text')
+    syntax = ('*')
     cmd = ('write-good')
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
@@ -27,9 +27,6 @@ class WriteGood(Linter):
     multiline = True
     default_type = highlight.WARNING
     selectors = {
-        'source': 'comment',
-        'text.html.markdown': '*',
-        'text.plain': '*',
-        'text.tex.latex': '*'
+        '*': 'text.html.markdown, text.plain, text.tex.latex, comment'
     }
     tempfile_suffix = '.tmp'
