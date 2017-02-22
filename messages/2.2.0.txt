@@ -1,0 +1,6 @@
+SublimeLinter-contrib-write-good
+-------------------------------
+
+- No longer lints your source code! That was annoying.
+- Uses a local version of write-good if its found.
+- Now checks to make sure you've got write-good 0.9.0 or newer.
