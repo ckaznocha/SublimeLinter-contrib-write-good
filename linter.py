@@ -7,10 +7,17 @@
 #
 # License: MIT
 #
-
 """This module exports the WriteGood plugin class."""
+import SublimeLinter
+from SublimeLinter.lint import NodeLinter
 
-from SublimeLinter.lint import NodeLinter, highlight
+
+if getattr(SublimeLinter.lint, 'VERSION', 3) > 3:
+    from SublimeLinter.lint import const
+    WARNING = const.WARNING
+else:
+    from SublimeLinter.lint import highlight
+    WARNING = highlight.WARNING
 
 
 class WriteGood(NodeLinter):
@@ -26,7 +33,7 @@ class WriteGood(NodeLinter):
         ^(?P<message>(?P<near>"[^"]*").*)\son\sline\s(?P<line>\d+)\sat\scolumn\s\d+$
     '''
     multiline = True
-    default_type = highlight.WARNING
+    default_type = WARNING
     selectors = {
         '*': 'text.html.markdown, text.plain, text.tex.latex, comment'
     }
