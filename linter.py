@@ -23,7 +23,6 @@ else:
 class WriteGood(NodeLinter):
     """Provides an interface to write-good."""
 
-    syntax = ('*')
     cmd = ('write-good')
     npm_name = 'write-good'
     version_args = '--version'
@@ -34,7 +33,7 @@ class WriteGood(NodeLinter):
     '''
     multiline = True
     default_type = WARNING
-    selectors = {
-        '*': 'text.html.markdown, text.plain, text.tex.latex, comment'
+    defaults = {
+        "selector": 'text.html.markdown, text.plain, text.tex.latex, comment'
     }
     tempfile_suffix = '.tmp'
