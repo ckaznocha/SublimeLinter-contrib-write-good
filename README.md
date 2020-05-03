@@ -59,6 +59,11 @@ Please note that modifications should follow these coding guidelines:
 
 Thank you for helping out!
 
+### Maintainers
+
+- [@ChrisCummins](https://github.com/ChrisCummins)
+- [@ckaznocha](https://github.com/ckaznocha) (inactive)  
+
 [docs]: http://sublimelinter.readthedocs.org
 [installation]: http://sublimelinter.readthedocs.org/en/latest/installation.html
 [locating-executables]: http://sublimelinter.readthedocs.org/en/latest/usage.html#how-linter-executables-are-located
